@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sankey Diagram</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Sankey Diagram of MRICloud Data</h1>
+    <div id="sankey"></div>
+    
+    <script>
+        // Load the Sankey diagram HTML file
+        Plotly.d3.html("sankey_diagram.html", function(err, data) {
+            if (err) throw err;
+            document.getElementById('sankey').innerHTML = data;
+        });
+    </script>
+</body>
+</html>
